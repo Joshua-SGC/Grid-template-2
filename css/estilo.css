@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+
+.contenedor > * {
+    box-shadow: rgba(0,0,0,0.75) 0px 5px 15px;
+    padding: 10px;
+    text-align: center;
+}
+/* 
+. ---> class 
+#-----> id
+*/
+.header{
+    grid-area: header;
+    background-color: #fb9805;
+}
+#navbar{
+    grid-area: navbar;
+    background-color: #fb7c05;
+}
+#main{
+    grid-area: main;
+    background-color: #fb5305;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+#sidebar{
+    grid-area: sidebar;
+    background-color: #fb0505;
+}
+#footer{
+    grid-area: footer;
+    background-color: aliceblue;
+}
+/* -------------cambios que yo hice */
+.texto1{
+    width: 90%;
+    background-color: rgba(173, 173, 173, 0.13);
+    margin-left: 5%;
+    margin-top: 1%;
+}
+.imagen1{
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 25%;
+}
+button{
+    background-color: rgb(212, 182, 7);
+    width: 80%;
+    border: none;
+    font-size: 15px;
+    margin-top: 10%;
+}
+.imagen2{
+    width: 100%;
+}
+/* --------------------------grid template column-------------*/
+.contenedor{
+    display: grid;
+    gap: 10px;
+    grid-template: 
+    "header" 100px
+    "navbar" 50px
+    "main" auto
+    "sidebar" 100px
+    "footer" 100px;
+}
+
+/*----------------@media -------------------------------*/
+@media(min-width:600px){
+    .contenedor{
+        grid-template:
+        "header header" 100px
+        "navbar navbar" 50px
+        "sidebar main" auto
+        "footer footer" 100px / 200px auto;
+    }
+}
+
+/*-----------------------------------@media 900 ----------------*/
+@media (min-width:900px){
+    .contenedor{
+        grid-template:
+        "header header header" 100px
+        "navbar main sidebar" auto
+        "footer footer footer" 100px /
+        200px auto 200px
+    }
+}

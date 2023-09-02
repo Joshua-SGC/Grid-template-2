@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Grid Template Column</title>
+</head>
+<body class="contenedor">
+    <header class="header">HEADER</header>
+
+    <nav id="navbar">BARRA DE NAVEGACION</nav>
+    <article id="main">MAIN</article>
+    <aside id="sidebar">SIDEBAR</aside>
+
+    <footer id="footer">FOOTER</footer>
+</body>
+</html>
+
+
